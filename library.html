@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Medical Library</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background-color: #f4f6f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #b71c1c;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #212121;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 0.8rem 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #424242;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #b71c1c;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.4rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      background: #ddd;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .steps {
+      background: #fafafa;
+      border-left: 5px solid #b71c1c;
+      padding: 0.8rem 1rem;
+      margin-top: 0.6rem;
+    }
+
+    .danger {
+      color: #b71c1c;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #212121;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .top-note {
+      background: #fff3cd;
+      border-left: 6px solid #ff9800;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 1100px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Emergency Medical Library</h1>
+  <p>Life-saving medical guidance - By: Omar Abuelwafa Mohamed</p>
+</header>
+
+<nav>
+  <a href="#life">Life-Threatening</a>
+  <a href="#trauma">Trauma</a>
+  <a href="#environment">Environmental</a>
+  <a href="#medical">Medical Conditions</a>
+  <a href="#minor">Minor Injuries</a>
+</nav>
+
+<div class="top-note">
+  <strong>Important:</strong> This website is designed for emergency first-response guidance when medical professionals are not immediately available. Always seek professional medical care as soon as possible.
+</div>
+
+<!-- ================= LIFE-THREATENING ================= -->
+<section id="life">
+  <h2>🚨 Life-Threatening Emergencies</h2>
+  <p>These conditions can cause death within minutes and require immediate action.</p>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="CPR%20being%20performed.gif" alt="CPR being performed" height="233" width="827">
+      <div class="card-content">
+        <h3>Cardiac Arrest</h3>
+        <p><strong>Signs:</strong> Unresponsive, no breathing, no pulse.</p>
+        <div class="steps">
+          <ol>
+            <li>Call emergency services immediately.</li>
+            <li>Start CPR: 30 compressions, 2 breaths.</li>
+            <li>Use AED if available.</li>
+          </ol>
+          <p class="danger">Do not delay CPR.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Severe%20bleeding%20first%20aid.gif" alt="Severe bleeding first aid" height="222" width="1177">
+      <div class="card-content">
+        <h3>Severe Bleeding (Hemorrhage)</h3>
+        <p><strong>Signs:</strong> Spurting blood, soaked clothing.</p>
+        <div class="steps">
+          <ol>
+            <li>Apply direct pressure.</li>
+            <li>Use tourniquet if bleeding continues.</li>
+            <li>Lay person down.</li>
+          </ol>
+          <p class="danger">Do not remove embedded objects.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Choking%20emergency%20response.gif" alt="Choking emergency response" height="223" width="627">
+      <div class="card-content">
+        <h3>Choking</h3>
+        <p><strong>Signs:</strong> Cannot breathe, speak, or cough.</p>
+        <div class="steps">
+          <ol>
+            <li>Give abdominal thrusts (Heimlich maneuver).</li>
+            <li>For infants: back blows and chest thrusts.</li>
+            <li>Call emergency services.</li>
+          </ol>
+          <p class="danger">Do not perform blind finger sweeps.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Allergic%20reaction%20emergency.gif" alt="Allergic reaction emergency" height="183" width="868">
+      <div class="card-content">
+        <h3>Anaphylaxis</h3>
+        <p><strong>Signs:</strong> Swelling, breathing difficulty, rash.</p>
+        <div class="steps">
+          <ol>
+            <li>Use epinephrine auto-injector immediately.</li>
+            <li>Lay flat, elevate legs.</li>
+            <li>Call emergency services.</li>
+          </ol>
+          <p class="danger">Do not delay epinephrine.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Stroke%20FAST%20signs%20illustration.gif" alt="Stroke FAST signs illustration" height="197" width="555">
+      <div class="card-content">
+        <h3>Stroke</h3>
+        <p><strong>FAST:</strong> Face droop, Arm weakness, Speech difficulty, Time critical.</p>
+        <div class="steps">
+          <ol>
+            <li>Call emergency services immediately.</li>
+            <li>Keep person seated upright.</li>
+            <li>Do not give food or drink.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Burn%20treatment%20with%20water.gif" alt="Burn treatment with water" height="213" width="908">
+      <div class="card-content">
+        <h3>Severe Burns</h3>
+        <p><strong>Signs:</strong> Blistering, charred skin, large area burns.</p>
+        <div class="steps">
+          <ol>
+            <li>Remove from heat source.</li>
+            <li>Cool with water for 20 minutes.</li>
+            <li>Cover loosely and seek emergency care.</li>
+          </ol>
+          <p class="danger">Do not apply butter or oils.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= TRAUMA ================= -->
+<section id="trauma">
+  <h2>🩸 Trauma</h2>
+  <p>Physical injuries caused by external force.</p>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="Head%20injury%20first%20aid.gif" alt="Head injury first aid" height="221" width="531">
+      <div class="card-content">
+        <h3>Head Injury / Concussion</h3>
+        <p><strong>Signs:</strong> Confusion, vomiting, loss of consciousness.</p>
+        <div class="steps">
+          <ol>
+            <li>Keep person still.</li>
+            <li>Monitor breathing and alertness.</li>
+            <li>Seek medical evaluation.</li>
+          </ol>
+          <p class="danger">Do not let them sleep if symptoms worsen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603398938450-17c5bcacae4d" alt="Spinal injury stabilization">
+      <div class="card-content">
+        <h3>Spinal Injury</h3>
+        <p><strong>Signs:</strong> Neck pain, numbness, paralysis.</p>
+        <div class="steps">
+          <ol>
+            <li>Do not move the person.</li>
+            <li>Stabilize head and neck.</li>
+            <li>Call emergency services.</li>
+          </ol>
+          <p class="danger">Any movement may cause paralysis.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580281658629-8a9b57fbe4e3" alt="Fracture splinting">
+      <div class="card-content">
+        <h3>Fractures</h3>
+        <p><strong>Signs:</strong> Deformity, swelling, severe pain.</p>
+        <div class="steps">
+          <ol>
+            <li>Immobilize the area.</li>
+            <li>Apply ice.</li>
+            <li>Seek medical care.</li>
+          </ol>
+          <p class="danger">Do not attempt to realign bones.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Burn%20treatment%20with%20water.gif" alt="Burn injury care" height="216" width="769">
+      <div class="card-content">
+        <h3>Burn Injuries</h3>
+        <p><strong>Signs:</strong> Redness, blisters, charred skin.</p>
+        <div class="steps">
+          <ol>
+            <li>Cool with water.</li>
+            <li>Cover loosely.</li>
+            <li>Get medical care if severe.</li>
+          </ol>
+          <p class="danger">Do not pop blisters.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603398938450-82d64cbbfcd6" alt="Eye injury treatment">
+      <div class="card-content">
+        <h3>Eye Injuries</h3>
+        <p><strong>Signs:</strong> Pain, vision loss, bleeding.</p>
+        <div class="steps">
+          <ol>
+            <li>Flush chemicals with clean water.</li>
+            <li>Do not remove embedded objects.</li>
+            <li>Cover both eyes and seek care.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ENVIRONMENTAL ================= -->
+<section id="environment">
+  <h2>🌍 Environmental Emergencies</h2>
+  <p>Injuries and illnesses caused by environmental exposure.</p>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504718855392-c0f33b0d8b9d" alt="Heat exhaustion treatment">
+      <div class="card-content">
+        <h3>Heat Exhaustion</h3>
+        <p><strong>Signs:</strong> Heavy sweating, weakness, nausea.</p>
+        <div class="steps">
+          <ol>
+            <li>Move to shade.</li>
+            <li>Give cool fluids.</li>
+            <li>Cool with wet cloths.</li>
+          </ol>
+          <p class="danger">Seek care if symptoms worsen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Hypothermia warming">
+      <div class="card-content">
+        <h3>Hypothermia</h3>
+        <p><strong>Signs:</strong> Shivering, slurred speech, confusion.</p>
+        <div class="steps">
+          <ol>
+            <li>Move to warm shelter.</li>
+            <li>Remove wet clothing.</li>
+            <li>Warm gradually.</li>
+          </ol>
+          <p class="danger">Do not use hot baths for severe hypothermia.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1535909339361-9c43c7b70c13" alt="Snake bite emergency">
+      <div class="card-content">
+        <h3>Snake Bite</h3>
+        <p><strong>Signs:</strong> Fang marks, swelling, pain.</p>
+        <div class="steps">
+          <ol>
+            <li>Keep victim still.</li>
+            <li>Immobilize limb.</li>
+            <li>Seek emergency care.</li>
+          </ol>
+          <p class="danger">Do not cut, suck, or apply tourniquet.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1597764699514-32c61d6b2e92" alt="Drowning rescue">
+      <div class="card-content">
+        <h3>Drowning / Near-Drowning</h3>
+        <p><strong>Signs:</strong> Not breathing, coughing water.</p>
+        <div class="steps">
+          <ol>
+            <li>Remove from water safely.</li>
+            <li>Begin rescue breathing/CPR.</li>
+            <li>Call emergency services.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582719478144-2eaf3f3a0bfa" alt="Carbon monoxide poisoning emergency">
+      <div class="card-content">
+        <h3>Carbon Monoxide Poisoning</h3>
+        <p><strong>Signs:</strong> Headache, dizziness, confusion.</p>
+        <div class="steps">
+          <ol>
+            <li>Move to fresh air immediately.</li>
+            <li>Call emergency services.</li>
+            <li>Do not re-enter area.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= MEDICAL CONDITIONS ================= -->
+<section id="medical">
+  <h2>🩺 Medical Conditions</h2>
+  <p>Sudden illnesses not caused by injury.</p>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580281658245-2a0fbd1c8a9a" alt="Asthma inhaler use">
+      <div class="card-content">
+        <h3>Asthma Attack</h3>
+        <p><strong>Signs:</strong> Wheezing, chest tightness, shortness of breath.</p>
+        <div class="steps">
+          <ol>
+            <li>Sit upright.</li>
+            <li>Use inhaler.</li>
+            <li>Seek emergency care if no improvement.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603398938450-0efb2fdc0f6c" alt="Seizure first aid">
+      <div class="card-content">
+        <h3>Seizure</h3>
+        <p><strong>Signs:</strong> Convulsions, loss of consciousness.</p>
+        <div class="steps">
+          <ol>
+            <li>Protect head.</li>
+            <li>Do not restrain.</li>
+            <li>Place in recovery position after.</li>
+          </ol>
+          <p class="danger">Call emergency services if seizure lasts >5 minutes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588776814546-ec7c1d4f1d47" alt="Diabetic emergency treatment">
+      <div class="card-content">
+        <h3>Low Blood Sugar (Hypoglycemia)</h3>
+        <p><strong>Signs:</strong> Shaking, sweating, confusion.</p>
+        <div class="steps">
+          <ol>
+            <li>Give sugary drink or glucose tablets.</li>
+            <li>Recheck after 15 minutes.</li>
+            <li>Seek emergency care if unconscious.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582719478170-dbd4b19d2c4c" alt="Fainting emergency response">
+      <div class="card-content">
+        <h3>Fainting (Syncope)</h3>
+        <p><strong>Signs:</strong> Sudden collapse, pale skin.</p>
+        <div class="steps">
+          <ol>
+            <li>Lay flat.</li>
+            <li>Elevate legs.</li>
+            <li>Monitor breathing.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588776814508-9f3cfb8f8db7" alt="Panic attack calming">
+      <div class="card-content">
+        <h3>Panic Attack</h3>
+        <p><strong>Signs:</strong> Rapid breathing, fear, chest tightness.</p>
+        <div class="steps">
+          <ol>
+            <li>Reassure calmly.</li>
+            <li>Slow breathing.</li>
+            <li>Stay with person.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= MINOR INJURIES ================= -->
+<section id="minor">
+  <h2>🩹 Minor Injuries & Conditions</h2>
+  <p>Non-life-threatening injuries that can usually be treated at home.</p>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580281658619-4d4d5b2d3c3c" alt="Cut wound cleaning">
+      <div class="card-content">
+        <h3>Minor Cuts & Scrapes</h3>
+        <p><strong>Signs:</strong> Small bleeding wounds.</p>
+        <div class="steps">
+          <ol>
+            <li>Wash with clean water.</li>
+            <li>Apply antiseptic.</li>
+            <li>Cover with bandage.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1597764699514-9ef4f5c1f5a2" alt="Nosebleed treatment">
+      <div class="card-content">
+        <h3>Nosebleed</h3>
+        <p><strong>Signs:</strong> Bleeding from nose.</p>
+        <div class="steps">
+          <ol>
+            <li>Lean forward.</li>
+            <li>Pinch nostrils for 10 minutes.</li>
+            <li>Apply cold compress.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588776814488-2e0fd9a3e4e2" alt="Sprained ankle care">
+      <div class="card-content">
+        <h3>Sprains & Strains</h3>
+        <p><strong>Signs:</strong> Pain, swelling, limited movement.</p>
+        <div class="steps">
+          <ol>
+            <li>Rest.</li>
+            <li>Ice.</li>
+            <li>Compression and elevation.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588776814560-5c20f3e8e1c2" alt="Fever care">
+      <div class="card-content">
+        <h3>Fever</h3>
+        <p><strong>Signs:</strong> High body temperature.</p>
+        <div class="steps">
+          <ol>
+            <li>Give fluids.</li>
+            <li>Use fever reducers if appropriate.</li>
+            <li>Seek care if persistent.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580281658597-7a4d1a8f3c4f" alt="Sunburn treatment">
+      <div class="card-content">
+        <h3>Sunburn</h3>
+        <p><strong>Signs:</strong> Red, painful skin.</p>
+        <div class="steps">
+          <ol>
+            <li>Cool compress.</li>
+            <li>Aloe vera.</li>
+            <li>Hydration.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>Emergency Medical Library — Designed for emergency preparedness and survival education.</p>
+  <p>Always seek professional medical care whenever possible.</p>
+</footer>
+
+</body>
+</html>

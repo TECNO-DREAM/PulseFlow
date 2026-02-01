@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Medical ID</title>
+  <style>
+    body {
+      margin: 0;
+      background: #263238;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header {
+      background: #37474f;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    small {
+      display: block;
+      font-size: 12px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>👤 MY MEDICAL ID</header>
+
+<input id="name" placeholder="Full Name">
+<input id="gender" placeholder="Gender">
+<input id="nationality" placeholder="Nationality">
+<input id="blood" placeholder="Blood Type">
+<input id="allergies" placeholder="Allergies">
+<input id="conditions" placeholder="Medical Conditions">
+<input id="medications" placeholder="Medications">
+<small>Enter emergency contacts separated by commas (e.g., 201001234567,201112345678)</small>
+<input id="emergencyContacts" placeholder="Emergency Contacts">
+
+<button onclick="save()">Save</button>
+
+<script>
+const data = JSON.parse(localStorage.getItem("medicalProfile") || "{}");
+
+name.value = data.name || "";
+gender.value = data.gender || "";
+nationality.value = data.nationality || "";
+blood.value = data.blood || "";
+allergies.value = data.allergies || "";
+conditions.value = data.conditions || "";
+medications.value = data.medications || "";
+emergencyContacts.value = data.emergencyContacts ? data.emergencyContacts.join(",") : "";
+
+// ================== SAVE FUNCTION ==================
+function save() {
+  // Split contacts into array and remove empty strings
+  const contactsArray = emergencyContacts.value.split(",").map(c => c.trim()).filter(c => c);
+
+  const profile = {
+    name: name.value,
+    gender: gender.value,
+    nationality: nationality.value,
+    blood: blood.value,
+    allergies: allergies.value,
+    conditions: conditions.value,
+    medications: medications.value,
+    emergencyContacts: contactsArray
+  };
+
+  localStorage.setItem("medicalProfile", JSON.stringify(profile));
+  alert("Saved!");
+}
+</script>
+
+</body>
+</html>
